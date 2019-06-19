@@ -202,7 +202,6 @@ class UserController {
     }
 
     selectAll(){        
-
         
         User.getUsersStorage().then(data=>{
 
