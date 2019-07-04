@@ -99,7 +99,7 @@ class User {
 
     save(){
 
-        new Promise((resolve, reject)=>{
+        return new Promise((resolve, reject)=>{
 
             let promise;
     
@@ -112,7 +112,7 @@ class User {
                 promise = Fetch.post(`/users`, this.toJSON());
             }
     
-            promise.them(data => {
+            promise.then(data => {
     
                 this.loadFromJSON(data);
 
